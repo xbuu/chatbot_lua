@@ -4,13 +4,6 @@
  █▄▄ █▄█ █▀█ █▄█ █▄█ ░█░ v1.00
 ]]
 
-_G.gay = true
-
-
-_G.user = "blox"
-_G.prefix = "'"
-_G.version = "v1.00"
-
 cmds = {
     "botname",
     "botprefix"
