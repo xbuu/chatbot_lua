@@ -50,8 +50,8 @@ for i,v in pairs(players:GetChildren()) do
 end
 
 players.PlayerAdded:Connect(function(v)
-    warn(_G.user..": Player ("..v..") joined the server.")
-    chat(_G.user..": Player ("..v..") joined the server.")
+    warn(_G.user..": Player ("..v.Name..") joined the server.")
+    chat(_G.user..": Player ("..v.Name..") joined the server.")
     v.Chatted:Connect(function(msg)
         if msg:lower() == _G.prefix..cmds[1] then
             chat("Hello, I am ".._G.user)
@@ -64,5 +64,3 @@ players.PlayerAdded:Connect(function(v)
         end
     end)
 end)
-
--- end
