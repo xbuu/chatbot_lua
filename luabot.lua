@@ -43,9 +43,9 @@ for i,v in pairs(players:GetChildren()) do
             chat("Current prefix is ".._G.prefix)
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
-        elseif msg:lower() == _G.prefix..cmds[3] then
-            localplr.Character.HumanoidRootPart.CFrame = workspace[v.Name].HumanoidRootPart.CFrame
-        elseif msg:lower() == _G.prefix..cmds[4] then
+        elseif msg:lower() == _G.prefix..cmds[3].._G.user then
+            localplr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+        elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
 
@@ -72,9 +72,9 @@ players.PlayerAdded:Connect(function(v)
             chat("Current prefix is ".._G.prefix)
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
-        elseif msg:lower() == _G.prefix..cmds[3] then
-            localplr.Character.HumanoidRootPart.CFrame = workspace[v.Name].HumanoidRootPart.CFrame
-        elseif msg:lower() == _G.prefix..cmds[4] then
+        elseif msg:lower() == _G.prefix..cmds[3].._G.user then
+            localplr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+        elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
 
