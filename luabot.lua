@@ -44,7 +44,7 @@ for i,v in pairs(players:GetChildren()) do
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
         elseif msg:lower() == _G.prefix..cmds[3].._G.user then
-            localplr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+            localplr.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
         elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
@@ -73,7 +73,7 @@ players.PlayerAdded:Connect(function(v)
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
         elseif msg:lower() == _G.prefix..cmds[3].._G.user then
-            localplr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+            localplr.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
         elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
