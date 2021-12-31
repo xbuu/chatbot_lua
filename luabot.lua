@@ -6,7 +6,7 @@
 
 -- variables
 
-local players = game:GetService("Players")
+local players = game:GetService("Players");
 local localplr = players.LocalPlayer
 
 function chat(string)
@@ -44,7 +44,9 @@ for i,v in pairs(players:GetChildren()) do
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
         elseif msg:lower() == _G.prefix..cmds[3].._G.user then
+            warn("[LuaBot]: Client Teleport Request.")
             localplr.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
+            warn("[LuaBot]: Client Teleported Successfully.")
         elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
@@ -53,7 +55,8 @@ for i,v in pairs(players:GetChildren()) do
         --/ Side Commands -- Loading Commands (####################################################################################) --\
         
         elseif msg:lower() == _G.prefix..sidecmds[1].." brew" then
-            warn("LuaBot: hi")
+            warn("[LuaBot]: Client Responded.")
+            chat("[LuaBot]: Client Responded.")
         elseif split[1] == _G.prefix.."%c" then
             local yes = split[2]
             chat(yes)
@@ -73,7 +76,9 @@ players.PlayerAdded:Connect(function(v)
         elseif msg:lower() == "%k. ".._G.user then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/xbuu/chatbot_lua/main/kekw.lua"))()
         elseif msg:lower() == _G.prefix..cmds[3].._G.user then
+            warn("[LuaBot]: Client Teleport Request.")
             localplr.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
+            warn("[LuaBot]: Client Teleported Successfully.")
         elseif msg:lower() == _G.prefix..cmds[4].._G.user then
             localplr.Character.Humanoid.Health = 0
 
@@ -82,7 +87,8 @@ players.PlayerAdded:Connect(function(v)
         --/ Side Commands -- Loading Commands (####################################################################################) --\
         
         elseif msg:lower() == _G.prefix..sidecmds[1].." brew" then
-            warn("LuaBot: hi")
+            warn("[LuaBot]: Client Responded.")
+            chat("[LuaBot]: Client Responded.")
         elseif split[1] == _G.prefix.."%c" then
             local yes = split[2]
             chat(yes)
